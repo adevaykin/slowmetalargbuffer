@@ -43,7 +43,7 @@ struct FragmentShaderArguments {
 };
 
 static inline __attribute__((always_inline))
-float4 getTextureValue(thread const uint32_t samplerId, thread const float2& uv, thread const array<texture2d<float>, 100000> SceneTextures)
+float4 getTextureValue(thread const uint32_t samplerId, thread const float2& uv, device const array<texture2d<float>, 100000>& SceneTextures)
 {
 	constexpr sampler textureSampler (mag_filter::linear,
 									  min_filter::linear);
